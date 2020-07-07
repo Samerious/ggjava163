@@ -22,19 +22,17 @@ public class Employee {
     public double getWage(){
         return wage;
     }
-    public void setWage(){
-        Scanner userinput = new Scanner(System.in);
-        System.out.print("Enter the hours worked: ");
-        wage = input.nextDouble();
 
+    public double setWage(){
+        this.wage = wage;
     }
+
+
     public String getFullName(){
         return fullname;
     }
     public void setFullName(){
-        Scanner userinput = new Scanner(System.in);
-        System.out.print("Enter the Employees Name: ");
-        fullname = input.nextLine();
+        this.fullname=fullname;
     }
 
     public double getHoursWorked(){
@@ -42,9 +40,14 @@ public class Employee {
     }
 
     public void setHoursWorked(){
-        Scanner userinput = new Scanner(System.in);
-        System.out.print("Enter the hours worked: ");
-        hoursworked = input.nextDouble();
+        this.hoursworked = hoursworked;
     }
+    Scanner input = new Scanner(System.in);
+           System.out.print("Enter the Employees Name: ");
+    fullname = input.nextLine();
+           System.out.print("Enter the hours worked: ");
+    hoursworked = input.nextDouble();
+           System.out.print("Enter the hourly wage: ");
+    wage = input.nextDouble();
 Employee employee1 = new Employee(getFullName(),getHoursWorked(),getWage());
 }
